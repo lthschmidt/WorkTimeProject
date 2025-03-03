@@ -1,0 +1,7 @@
+C:\Users\elisa\Desktop\time-tracking-portal\WorkTimeAPI\obj\x86\Debug\net8.0\WorkTimeAPI.csproj.AssemblyReference.cache
+C:\Users\elisa\Desktop\time-tracking-portal\WorkTimeAPI\obj\x86\Debug\net8.0\WorkTimeAPI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\elisa\Desktop\time-tracking-portal\WorkTimeAPI\obj\x86\Debug\net8.0\WorkTimeAPI.AssemblyInfoInputs.cache
+C:\Users\elisa\Desktop\time-tracking-portal\WorkTimeAPI\obj\x86\Debug\net8.0\WorkTimeAPI.AssemblyInfo.cs
+C:\Users\elisa\Desktop\time-tracking-portal\WorkTimeAPI\obj\x86\Debug\net8.0\WorkTimeAPI.csproj.CoreCompileInputs.cache
+C:\Users\elisa\Desktop\time-tracking-portal\WorkTimeAPI\obj\x86\Debug\net8.0\WorkTimeAPI.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\elisa\Desktop\time-tracking-portal\WorkTimeAPI\obj\x86\Debug\net8.0\WorkTimeAPI.MvcApplicationPartsAssemblyInfo.cache
