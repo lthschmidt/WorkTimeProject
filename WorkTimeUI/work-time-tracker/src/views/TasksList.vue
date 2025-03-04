@@ -56,7 +56,7 @@ const removeTask = async (id) => {
         tasks.value = tasks.value.filter(p => p.id !== id);
         message.success('Задача удалена');
     } catch (error) {
-        message.error('Ошибка удаления задачи');
+        message.error(`Ошибка удаления задачи: ${error.response.data}`);
     }
 };
 
@@ -81,7 +81,7 @@ const loadProjects = async () => {
             return acc;
         }, {});
     } catch (error) {
-        message.error('Ошибка загрузки проектов');
+        message.error(error.response.data);
     }
 };
 

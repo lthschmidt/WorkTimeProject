@@ -23,7 +23,7 @@ const saveProject = async () => {
         emit('update');
         emit('close');
     } catch (error) {
-        message.error('Ошибка сохранения проекта');
+        message.error(error.response.data);
     }
 };
 

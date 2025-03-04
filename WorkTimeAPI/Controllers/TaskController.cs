@@ -26,23 +26,26 @@ public class TaskController : ControllerBase
     }
 
 
-    // Получить задачи по ID проекта
+    // Получить задачу по ID
     [HttpGet("{id}")]
     public async Task<ActionResult<Task>> GetTask(int id)
     {
         var Task = await _context.Tasks.FindAsync(id);
         if (Task == null)
-            return NotFound();
+            return NotFound("Задачи не найдены");
         return Task;
     }
 
-    // Добавить проект
+    // Добавить задачу
     [HttpPost]
     public async Task<ActionResult<Task>> CreateTask(Task Task)
     {
         var project = await _context.Projects.FindAsync(Task.ProjectId);
         if (project == null)
             return NotFound("Проект не найден");
+
+        if (!project.IsActive)
+            return BadRequest("Нельзя создать проводку для неактивного проекта");
 
         Task.Project = project;  // Привязываем существующий проект
         _context.Tasks.Add(Task);

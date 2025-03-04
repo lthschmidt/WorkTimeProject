@@ -2,13 +2,13 @@
 import { ref } from 'vue';
 import { useRouter } from 'vue-router';
 import { loginUser } from '@/services/users';
-import { NInput, NButton, NForm, NFormItem, NCard } from 'naive-ui';
+import { NInput, NButton, NForm, NFormItem, NCard, useMessage } from 'naive-ui';
 import { login } from '@/auth';
 
 const router = useRouter();
 const email = ref('');
 const password = ref('');
-const errorMessage = ref('');
+const message = useMessage();
 
 const handleLogin = async () => {
   try {
@@ -19,7 +19,7 @@ const handleLogin = async () => {
       router.push('/'); // Переход на главную страницу
     }
   } catch (error) {
-    errorMessage.value = 'Неверный email или пароль';
+    message.error(error.response.data);
   }
 };
 </script>
@@ -37,7 +37,6 @@ const handleLogin = async () => {
         <n-form-item class="login-button">
           <n-button type="primary" @click="handleLogin">Войти</n-button>
         </n-form-item>
-        <p v-if="errorMessage" class="error">{{ errorMessage }}</p>
       </n-form>
     </n-card>
   </div>

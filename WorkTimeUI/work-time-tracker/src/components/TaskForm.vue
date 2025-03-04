@@ -29,7 +29,7 @@ const saveTask = async () => {
         emit('update');
         emit('close');
     } catch (error) {
-        message.error('Ошибка обновления проекта');
+        message.error(error.response.data);
     }
 };
 

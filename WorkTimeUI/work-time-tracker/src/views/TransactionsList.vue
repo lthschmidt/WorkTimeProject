@@ -62,7 +62,7 @@ const fetchTransactions = async () => {
         ]);
 
     } catch (error) {
-        message.error('Ошибка загрузки проводок');
+        message.error(error.response.data);
     }
 };
 
@@ -87,26 +87,38 @@ const removeTransaction = async (id) => {
         emit('update');
         await fetchTransactions();
     } catch (error) {
-        message.error('Ошибка удаления проводки');
+        message.error(`Ошибка удаления проводки: ${error.response.data}`);
     }
 };
 
 // Загрузка имён пользователей, открывших проводки
 const loadUsers = async (userIds) => {
-    const requests = userIds.map(id => getUser(id));
-    const results = await Promise.all(requests);
-    results.forEach((user, index) => {
-        users.value[userIds[index]] = user;
-    });
+    try {
+        const requests = userIds.map(id => getUser(id));
+        const results = await Promise.all(requests);
+        results.forEach((user, index) => {
+            users.value[userIds[index]] = user;
+        });
+    }
+    catch (error)
+    {
+        message.error(error.response.data);
+    }
 };
 
 // Загрузка названий задач
 const loadTasks = async (taskIds) => {
-    const requests = taskIds.map(id => getTask(id));
-    const results = await Promise.all(requests);
-    results.forEach((task, index) => {
-        tasks.value[taskIds[index]] = task;
-    });
+    try {
+        const requests = taskIds.map(id => getTask(id));
+        const results = await Promise.all(requests);
+        results.forEach((task, index) => {
+            tasks.value[taskIds[index]] = task;
+        });
+    }
+    catch (error)
+    {
+        message.error(error.response.data);
+    }
 };
 
 // Функция фильтрации

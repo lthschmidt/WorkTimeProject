@@ -35,7 +35,7 @@ const removeProject = async (id) => {
         projects.value = projects.value.filter(p => p.id !== id);
         message.success('Проект удалён');
     } catch (error) {
-        message.error('Ошибка удаления проекта');
+        message.error(`Ошибка удаления проекта: ${error.response.data}`);
     }
 };
 

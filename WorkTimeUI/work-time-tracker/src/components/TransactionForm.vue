@@ -29,7 +29,7 @@ const saveTransaction = async () => {
         emit('update'); // Сообщаем родителю, что обновили
         emit('close');
     } catch (error) {
-        message.error('Ошибка добавления проводки');
+        message.error(error.response.data);
     }
 };
 

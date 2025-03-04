@@ -193,3 +193,4 @@ C:\Users\elisa\Desktop\time-tracking-portal\WorkTimeAPI\obj\Debug\net8.0\refint\
 C:\Users\elisa\Desktop\time-tracking-portal\WorkTimeAPI\obj\Debug\net8.0\WorkTimeAPI.pdb
 C:\Users\elisa\Desktop\time-tracking-portal\WorkTimeAPI\obj\Debug\net8.0\WorkTimeAPI.genruntimeconfig.cache
 C:\Users\elisa\Desktop\time-tracking-portal\WorkTimeAPI\obj\Debug\net8.0\ref\WorkTimeAPI.dll
+C:\Users\elisa\Desktop\time-tracking-portal\WorkTimeAPI\obj\Debug\net8.0\WorkTimeAPI.sourcelink.json
